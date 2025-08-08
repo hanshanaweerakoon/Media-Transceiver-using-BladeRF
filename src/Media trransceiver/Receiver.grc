@@ -1,0 +1,1604 @@
+options:
+  parameters:
+    author: gnuradio
+    catch_exceptions: 'True'
+    category: '[GRC Hier Blocks]'
+    cmake_opt: ''
+    comment: ''
+    copyright: ''
+    description: ''
+    gen_cmake: 'On'
+    gen_linking: dynamic
+    generate_options: qt_gui
+    hier_block_src_path: '.:'
+    id: test9
+    max_nouts: '0'
+    output_language: python
+    placement: (0,0)
+    qt_qss_theme: ''
+    realtime_scheduling: ''
+    run: 'True'
+    run_command: '{python} -u {filename}'
+    run_options: prompt
+    sizing_mode: fixed
+    thread_safe_setters: ''
+    title: Not titled yet
+    window_size: (1000,1000)
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [8, 12.0]
+    rotation: 0
+    state: enabled
+
+blocks:
+- name: cc_encoder
+  id: variable_cc_encoder_def
+  parameters:
+    comment: ''
+    dim1: '1'
+    dim2: '1'
+    framebits: mtu*8
+    k: '7'
+    mode: fec.CC_TAILBITING
+    ndim: '0'
+    padding: 'False'
+    polys: polynomials
+    rate: '2'
+    state_start: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [184, 1604.0]
+    rotation: 0
+    state: disabled
+- name: delay
+  id: variable_qtgui_range
+  parameters:
+    comment: 0,3,1,1
+    gui_hint: 0,3,1,1
+    label: Delay
+    min_len: '200'
+    orient: QtCore.Qt.Horizontal
+    rangeType: float
+    start: '0'
+    step: '1'
+    stop: '500'
+    value: '0'
+    widget: counter_slider
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [264, 1640.0]
+    rotation: 0
+    state: disabled
+- name: excess_bw
+  id: variable
+  parameters:
+    comment: ''
+    value: '0.35'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1112, 20.0]
+    rotation: 0
+    state: enabled
+- name: freq_offset
+  id: variable_qtgui_range
+  parameters:
+    comment: ''
+    gui_hint: ''
+    label: Frequency Offset
+    min_len: '200'
+    orient: QtCore.Qt.Horizontal
+    rangeType: float
+    start: '-0.1'
+    step: '0.001'
+    stop: '0.1'
+    value: '0'
+    widget: counter_slider
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1368, 16.0]
+    rotation: 0
+    state: enabled
+- name: hdr_format
+  id: variable_header_format_default
+  parameters:
+    access_code: '00011010110011111111110000011101'
+    bps: '1'
+    comment: ''
+    threshold: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [176, 1660.0]
+    rotation: 0
+    state: disabled
+- name: nfilts
+  id: variable
+  parameters:
+    comment: ''
+    value: '32'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [744, 124.0]
+    rotation: 0
+    state: enabled
+- name: noise_volt
+  id: variable_qtgui_range
+  parameters:
+    comment: ''
+    gui_hint: ''
+    label: Noise Voltage
+    min_len: '200'
+    orient: QtCore.Qt.Horizontal
+    rangeType: float
+    start: '0'
+    step: '0.01'
+    stop: '1'
+    value: '0'
+    widget: counter_slider
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1408, 192.0]
+    rotation: 0
+    state: enabled
+- name: phase_bw
+  id: variable
+  parameters:
+    comment: ''
+    value: '0.0628'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [616, 108.0]
+    rotation: 0
+    state: enabled
+- name: polynomials
+  id: variable
+  parameters:
+    comment: ''
+    value: '[109, 79]'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1240, 20.0]
+    rotation: 0
+    state: enabled
+- name: qpsk
+  id: variable_constellation_rect
+  parameters:
+    comment: ''
+    const_points: '[0.707+0.707j, -0.707+0.707j, -0.707-0.707j, 0.707-0.707j]'
+    imag_sect: '2'
+    precision: '8'
+    real_sect: '2'
+    rot_sym: '4'
+    soft_dec_lut: None
+    sym_map: '[0, 1, 2 ,3]'
+    w_imag_sect: '1'
+    w_real_sect: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [48, 164.0]
+    rotation: 0
+    state: enabled
+- name: rrc_taps
+  id: variable
+  parameters:
+    comment: ''
+    value: firdes.root_raised_cosine(nfilts, nfilts, 1.0/float(samples_symbol), 0.35,
+      11*samples_symbol*nfilts)
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [840, 140.0]
+    rotation: 0
+    state: enabled
+- name: samp_rate
+  id: variable
+  parameters:
+    comment: ''
+    value: '750000'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [176, 12.0]
+    rotation: 0
+    state: enabled
+- name: samples_symbol
+  id: variable
+  parameters:
+    comment: ''
+    value: '4'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [616, 12.0]
+    rotation: 0
+    state: enabled
+- name: taps
+  id: variable
+  parameters:
+    comment: ''
+    value: '[1.0, 0.25-0.25j, 0.50 + 0.10j, -0.3 + 0.2j]'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [768, 28.0]
+    rotation: 0
+    state: enabled
+- name: time_offset
+  id: variable_qtgui_range
+  parameters:
+    comment: ''
+    gui_hint: ''
+    label: Timing Offset
+    min_len: '200'
+    orient: QtCore.Qt.Horizontal
+    rangeType: float
+    start: '0.999'
+    step: '0.0001'
+    stop: '1.001'
+    value: '1.0'
+    widget: counter_slider
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1280, 192.0]
+    rotation: 0
+    state: enabled
+- name: variable_adaptive_algorithm_0
+  id: variable_adaptive_algorithm
+  parameters:
+    comment: ''
+    cons: qpsk
+    delta: '10.0'
+    ffactor: '0.99'
+    modulus: '4'
+    step_size: '.0001'
+    type: cma
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1664, 68.0]
+    rotation: 0
+    state: enabled
+- name: variable_cc_decoder_def_0
+  id: variable_cc_decoder_def
+  parameters:
+    comment: ''
+    dim1: '1'
+    dim2: '1'
+    framebits: mtu*8
+    k: '7'
+    mode: fec.CC_TAILBITING
+    ndim: '1'
+    padding: 'False'
+    polys: polynomials
+    rate: '2'
+    state_end: '-1'
+    state_start: '0'
+    value: '"ok"'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [552, 1056.0]
+    rotation: 0
+    state: enabled
+- name: analog_agc_xx_0
+  id: analog_agc_xx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    gain: '1'
+    max_gain: '2'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    rate: 1e-4
+    reference: '1'
+    type: complex
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [728, 452.0]
+    rotation: 0
+    state: enabled
+- name: blocks_char_to_float_0
+  id: blocks_char_to_float
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    scale: '1'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [376, 912.0]
+    rotation: 0
+    state: enabled
+- name: blocks_char_to_float_0_0
+  id: blocks_char_to_float
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    scale: '1'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [224, 1672.0]
+    rotation: 0
+    state: disabled
+- name: blocks_char_to_float_0_0_0
+  id: blocks_char_to_float
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    scale: '1'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [224, 1672.0]
+    rotation: 0
+    state: disabled
+- name: blocks_delay_0
+  id: blocks_delay
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    delay: '0'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_ports: '1'
+    showports: 'False'
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [280, 1672.0]
+    rotation: 0
+    state: disabled
+- name: blocks_file_sink_0
+  id: blocks_file_sink
+  parameters:
+    affinity: ''
+    alias: ''
+    append: 'False'
+    comment: ''
+    file: C:\Users\chath\OneDrive\Desktop\input1.tmp
+    type: byte
+    unbuffered: 'True'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1240, 1132.0]
+    rotation: 0
+    state: enabled
+- name: blocks_file_source_0
+  id: blocks_file_source
+  parameters:
+    affinity: ''
+    alias: ''
+    begin_tag: pmt.PMT_NIL
+    comment: ''
+    file: C:\Users\Manujaya\Desktop\file.tmp
+    length: '0'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    offset: '0'
+    repeat: 'False'
+    type: byte
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [208, 1608.0]
+    rotation: 0
+    state: disabled
+- name: blocks_multiply_const_vxx_0
+  id: blocks_multiply_const_vxx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    const: '0.7'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [216, 1616.0]
+    rotation: 0
+    state: disabled
+- name: blocks_multiply_const_vxx_1
+  id: blocks_multiply_const_vxx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    const: '1.414'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [544, 480.0]
+    rotation: 0
+    state: enabled
+- name: blocks_repack_bits_bb_0
+  id: blocks_repack_bits_bb
+  parameters:
+    affinity: ''
+    alias: ''
+    align_output: 'False'
+    comment: ''
+    endianness: gr.GR_MSB_FIRST
+    k: '1'
+    l: '8'
+    len_tag_key: '""'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [872, 900.0]
+    rotation: 0
+    state: enabled
+- name: blocks_repack_bits_bb_1
+  id: blocks_repack_bits_bb
+  parameters:
+    affinity: ''
+    alias: ''
+    align_output: 'False'
+    comment: ''
+    endianness: gr.GR_MSB_FIRST
+    k: '1'
+    l: '8'
+    len_tag_key: packet_len
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [232, 1652.0]
+    rotation: 0
+    state: disabled
+- name: blocks_repack_bits_bb_2
+  id: blocks_repack_bits_bb
+  parameters:
+    affinity: ''
+    alias: ''
+    align_output: 'False'
+    comment: ''
+    endianness: gr.GR_MSB_FIRST
+    k: '8'
+    l: '1'
+    len_tag_key: packet_len
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [208, 1636.0]
+    rotation: 0
+    state: disabled
+- name: blocks_stream_to_tagged_stream_0
+  id: blocks_stream_to_tagged_stream
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    len_tag_key: '"packet_len"'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    packet_len: '50'
+    type: byte
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [216, 1636.0]
+    rotation: 0
+    state: disabled
+- name: blocks_tagged_stream_mux_0
+  id: blocks_tagged_stream_mux
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    lengthtagname: packet_len
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    ninputs: '2'
+    tag_preserve_head_pos: '0'
+    type: byte
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [216, 1680.0]
+    rotation: 0
+    state: disabled
+- name: blocks_throttle2_0
+  id: blocks_throttle2
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    ignoretag: 'True'
+    limit: auto
+    maximum: '0.1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samples_per_second: 1e6
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [336, 468.0]
+    rotation: 0
+    state: enabled
+- name: blocks_unpack_k_bits_bb_1
+  id: blocks_unpack_k_bits_bb
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    k: '2'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1232, 688.0]
+    rotation: 0
+    state: enabled
+- name: digital_constellation_decoder_cb_0
+  id: digital_constellation_decoder_cb
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    constellation: qpsk
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [552, 688.0]
+    rotation: 0
+    state: enabled
+- name: digital_constellation_modulator_0
+  id: digital_constellation_modulator
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    constellation: qpsk
+    differential: 'True'
+    excess_bw: excess_bw
+    log: 'False'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samples_per_symbol: samples_symbol
+    truncate: 'False'
+    verbose: 'False'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [184, 1636.0]
+    rotation: 0
+    state: disabled
+- name: digital_correlate_access_code_xx_ts_0
+  id: digital_correlate_access_code_xx_ts
+  parameters:
+    access_code: '00011010110011111111110000011101'
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    tagname: packet_len
+    threshold: '2'
+    type: byte
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1400, 668.0]
+    rotation: 0
+    state: enabled
+- name: digital_costas_loop_cc_0
+  id: digital_costas_loop_cc
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    order: '4'
+    use_snr: 'False'
+    w: phase_bw
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [248, 696.0]
+    rotation: 0
+    state: enabled
+- name: digital_diff_decoder_bb_0
+  id: digital_diff_decoder_bb
+  parameters:
+    affinity: ''
+    alias: ''
+    coding: digital.DIFF_DIFFERENTIAL
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    modulus: '4'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [832, 676.0]
+    rotation: 0
+    state: enabled
+- name: digital_fll_band_edge_cc_0
+  id: digital_fll_band_edge_cc
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    filter_size: '44'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    rolloff: 350e-3
+    samps_per_sym: '4'
+    type: cc
+    w: '62.8e-3'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [904, 440.0]
+    rotation: 0
+    state: enabled
+- name: digital_linear_equalizer_0
+  id: digital_linear_equalizer
+  parameters:
+    adapt_after_training: 'True'
+    affinity: ''
+    alg: variable_adaptive_algorithm_0
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_taps: '15'
+    sps: '4'
+    training_sequence: '[ ]'
+    training_start_tag: corr_est
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1600, 360.0]
+    rotation: 0
+    state: enabled
+- name: digital_map_bb_0
+  id: digital_map_bb
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    map: '[0,1,2,3]'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1056, 688.0]
+    rotation: 0
+    state: enabled
+- name: digital_map_bb_1
+  id: digital_map_bb
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    map: '[-1, 1]'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [224, 912.0]
+    rotation: 0
+    state: enabled
+- name: digital_protocol_formatter_bb_0_0
+  id: digital_protocol_formatter_bb
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    format: hdr_format
+    len_tag_key: '"packet_len"'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [216, 1660.0]
+    rotation: 0
+    state: disabled
+- name: digital_symbol_sync_xx_0
+  id: digital_symbol_sync_xx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    constellation: digital.constellation_bpsk().base()
+    damping: '1.0'
+    loop_bw: phase_bw
+    max_dev: '1.5'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    nfilters: '32'
+    osps: '4'
+    pfb_mf_taps: rrc_taps
+    resamp_type: digital.IR_PFB_NO_MF
+    sps: samples_symbol
+    ted_gain: '1.0'
+    ted_type: digital.TED_SIGNAL_TIMES_SLOPE_ML
+    type: cc
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1176, 356.0]
+    rotation: 0
+    state: enabled
+- name: epy_block_0_1_0
+  id: epy_block
+  parameters:
+    _source_code: "import numpy as np\nfrom gnuradio import gr\n\n\nclass enc_blk(gr.sync_block):\n\
+      \n    def __init__(self, key=1.0):   \n        gr.sync_block.__init__(\n   \
+      \         self,\n            name='Ceaser Decryptor',\n            in_sig=[np.ubyte],\n\
+      \            out_sig=[np.ubyte]\n        )\n        \n        self.key = key\n\
+      \n    def work(self, input_items, output_items):\n        input_data = input_items[0]\n\
+      \        output_data = output_items[0]\n        for i in range(len(input_data)):\n\
+      \            output_data[i] = (input_data[i] - self.key) % 256\n\n        return\
+      \ len(output_data)\n"
+    affinity: ''
+    alias: ''
+    comment: ''
+    key: '1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    _io_cache: ('Ceaser Decryptor', 'enc_blk', [('key', '1.0')], [('0', 'byte', 1)],
+      [('0', 'byte', 1)], '', ['key'])
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1088.0, 992]
+    rotation: 270
+    state: bypassed
+- name: fec_extended_tagged_decoder_0
+  id: fec_extended_tagged_decoder
+  parameters:
+    affinity: ''
+    alias: ''
+    ann: None
+    comment: ''
+    decoder_list: variable_cc_decoder_def_0
+    lentagname: '"packet_len"'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    mtu: mtu
+    puncpat: '''11'''
+    value: fec_extended_decoder
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [560, 872.0]
+    rotation: 0
+    state: enabled
+- name: fec_extended_tagged_encoder_0
+  id: fec_extended_tagged_encoder
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    encoder_list: cc_encoder
+    lentagname: '"packet_len"'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    mtu: mtu
+    puncpat: '''11'''
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [200, 1620.0]
+    rotation: 0
+    state: disabled
+- name: mtu
+  id: parameter
+  parameters:
+    alias: ''
+    comment: ''
+    hide: none
+    label: ''
+    short_id: ''
+    type: intx
+    value: '1500'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1008, 36.0]
+    rotation: 0
+    state: enabled
+- name: qtgui_const_sink_x_0
+  id: qtgui_const_sink_x
+  parameters:
+    affinity: ''
+    alias: ''
+    alpha1: '1.0'
+    alpha10: '1.0'
+    alpha2: '1.0'
+    alpha3: '1.0'
+    alpha4: '1.0'
+    alpha5: '1.0'
+    alpha6: '1.0'
+    alpha7: '1.0'
+    alpha8: '1.0'
+    alpha9: '1.0'
+    autoscale: 'False'
+    axislabels: 'True'
+    color1: '"blue"'
+    color10: '"red"'
+    color2: '"red"'
+    color3: '"red"'
+    color4: '"red"'
+    color5: '"red"'
+    color6: '"red"'
+    color7: '"red"'
+    color8: '"red"'
+    color9: '"red"'
+    comment: ''
+    grid: 'False'
+    gui_hint: ''
+    label1: ''
+    label10: ''
+    label2: ''
+    label3: ''
+    label4: ''
+    label5: ''
+    label6: ''
+    label7: ''
+    label8: ''
+    label9: ''
+    legend: 'True'
+    marker1: '0'
+    marker10: '0'
+    marker2: '0'
+    marker3: '0'
+    marker4: '0'
+    marker5: '0'
+    marker6: '0'
+    marker7: '0'
+    marker8: '0'
+    marker9: '0'
+    name: '""'
+    nconnections: '1'
+    size: '1024'
+    style1: '0'
+    style10: '0'
+    style2: '0'
+    style3: '0'
+    style4: '0'
+    style5: '0'
+    style6: '0'
+    style7: '0'
+    style8: '0'
+    style9: '0'
+    tr_chan: '0'
+    tr_level: '0.0'
+    tr_mode: qtgui.TRIG_MODE_FREE
+    tr_slope: qtgui.TRIG_SLOPE_POS
+    tr_tag: '""'
+    type: complex
+    update_time: '0.10'
+    width1: '1'
+    width10: '1'
+    width2: '1'
+    width3: '1'
+    width4: '1'
+    width5: '1'
+    width6: '1'
+    width7: '1'
+    width8: '1'
+    width9: '1'
+    xmax: '2'
+    xmin: '-2'
+    ymax: '2'
+    ymin: '-2'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [512, 596.0]
+    rotation: 0
+    state: enabled
+- name: qtgui_const_sink_x_1
+  id: qtgui_const_sink_x
+  parameters:
+    affinity: ''
+    alias: ''
+    alpha1: '1.0'
+    alpha10: '1.0'
+    alpha2: '1.0'
+    alpha3: '1.0'
+    alpha4: '1.0'
+    alpha5: '1.0'
+    alpha6: '1.0'
+    alpha7: '1.0'
+    alpha8: '1.0'
+    alpha9: '1.0'
+    autoscale: 'False'
+    axislabels: 'True'
+    color1: '"blue"'
+    color10: '"red"'
+    color2: '"red"'
+    color3: '"red"'
+    color4: '"red"'
+    color5: '"red"'
+    color6: '"red"'
+    color7: '"red"'
+    color8: '"red"'
+    color9: '"red"'
+    comment: ''
+    grid: 'False'
+    gui_hint: ''
+    label1: ''
+    label10: ''
+    label2: ''
+    label3: ''
+    label4: ''
+    label5: ''
+    label6: ''
+    label7: ''
+    label8: ''
+    label9: ''
+    legend: 'True'
+    marker1: '0'
+    marker10: '0'
+    marker2: '0'
+    marker3: '0'
+    marker4: '0'
+    marker5: '0'
+    marker6: '0'
+    marker7: '0'
+    marker8: '0'
+    marker9: '0'
+    name: '""'
+    nconnections: '1'
+    size: '1024'
+    style1: '0'
+    style10: '0'
+    style2: '0'
+    style3: '0'
+    style4: '0'
+    style5: '0'
+    style6: '0'
+    style7: '0'
+    style8: '0'
+    style9: '0'
+    tr_chan: '0'
+    tr_level: '0.0'
+    tr_mode: qtgui.TRIG_MODE_FREE
+    tr_slope: qtgui.TRIG_SLOPE_POS
+    tr_tag: '""'
+    type: complex
+    update_time: '0.10'
+    width1: '1'
+    width10: '1'
+    width2: '1'
+    width3: '1'
+    width4: '1'
+    width5: '1'
+    width6: '1'
+    width7: '1'
+    width8: '1'
+    width9: '1'
+    xmax: '2'
+    xmin: '-2'
+    ymax: '2'
+    ymin: '-2'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [344, 372.0]
+    rotation: 0
+    state: enabled
+- name: qtgui_time_sink_x_0
+  id: qtgui_time_sink_x
+  parameters:
+    affinity: ''
+    alias: ''
+    alpha1: '1.0'
+    alpha10: '1.0'
+    alpha2: '1.0'
+    alpha3: '1.0'
+    alpha4: '1.0'
+    alpha5: '1.0'
+    alpha6: '1.0'
+    alpha7: '1.0'
+    alpha8: '1.0'
+    alpha9: '1.0'
+    autoscale: 'False'
+    axislabels: 'True'
+    color1: blue
+    color10: dark blue
+    color2: red
+    color3: green
+    color4: black
+    color5: cyan
+    color6: magenta
+    color7: yellow
+    color8: dark red
+    color9: dark green
+    comment: 1,2,1,2
+    ctrlpanel: 'False'
+    entags: 'True'
+    grid: 'False'
+    gui_hint: ''
+    label1: RX
+    label10: ''
+    label2: TX
+    label3: ''
+    label4: ''
+    label5: ''
+    label6: ''
+    label7: ''
+    label8: ''
+    label9: ''
+    legend: 'True'
+    marker1: '-1'
+    marker10: '-1'
+    marker2: '-1'
+    marker3: '-1'
+    marker4: '-1'
+    marker5: '-1'
+    marker6: '-1'
+    marker7: '-1'
+    marker8: '-1'
+    marker9: '-1'
+    name: '""'
+    nconnections: '2'
+    size: '1024'
+    srate: samp_rate
+    stemplot: 'False'
+    style1: '1'
+    style10: '1'
+    style2: '1'
+    style3: '1'
+    style4: '1'
+    style5: '1'
+    style6: '1'
+    style7: '1'
+    style8: '1'
+    style9: '1'
+    tr_chan: '0'
+    tr_delay: '0'
+    tr_level: '0.0'
+    tr_mode: qtgui.TRIG_MODE_FREE
+    tr_slope: qtgui.TRIG_SLOPE_POS
+    tr_tag: '""'
+    type: float
+    update_time: '0.10'
+    width1: '1'
+    width10: '1'
+    width2: '1'
+    width3: '1'
+    width4: '1'
+    width5: '1'
+    width6: '1'
+    width7: '1'
+    width8: '1'
+    width9: '1'
+    ylabel: Amplitude
+    ymax: '2'
+    ymin: '-2'
+    yunit: '""'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [224, 1660.0]
+    rotation: 0
+    state: disabled
+- name: snippet_0
+  id: snippet
+  parameters:
+    alias: ''
+    code: "##def convert_to_tmp(input_file, output_file, header_string, footer_string):\n\
+      ##    \"\"\"\n##    Converts a file to .tmp format by copying its content, adding\
+      \ a header at the beginning,\n##    and a footer at the end.\n##\n##    Args:\n\
+      ##        input_file (str): Path to the input file.\n##        output_file (str):\
+      \ Path to save the .tmp file.\n##        header_string (str): Header string\
+      \ to add at the beginning of the .tmp file.\n##        footer_string (str):\
+      \ Footer string to add at the end of the .tmp file.\n##\n##    Returns:\n##\
+      \        str: Path to the created .tmp file.\n##    \"\"\"\n####    if not os.path.isfile(input_file):\n\
+      ####        raise FileNotFoundError(f\"Input file '{input_file}' does not exist.\"\
+      )\n####\n####    # Ensure the output directory exists\n####    os.makedirs(os.path.dirname(output_file),\
+      \ exist_ok=True)\n####\n##    # Read the content of the input file\n##    with\
+      \ open(input_file, 'rb') as infile:\n##        content = infile.read()\n##\n\
+      ##    # Write the header, content, and footer to the .tmp file\n##    with open(output_file,\
+      \ 'wb') as outfile:\n##        outfile.write(header_string.encode('utf-8') +\
+      \ b\"\\n\")  # Write the header\n##        outfile.write(content)          \
+      \                       # Write the file content\n##        outfile.write(b\"\
+      \\n\" + footer_string.encode('utf-8'))  # Write the footer\n##\n##    return\
+      \ output_file\n\ndef convert_tmp_to_original(tmp_file, original_extension, output_file,\
+      \ header_end_marker, footer_start_marker):\n    \"\"\"\n    Converts a .tmp\
+      \ file back to its original format by removing the header and footer strings\n\
+      \    and renaming it with the provided extension.\n\n    Args:\n        tmp_file\
+      \ (str): Path to the .tmp file.\n        original_extension (str): Original\
+      \ file extension (e.g., '.txt', '.jpg').\n        output_file (str): Path to\
+      \ save the restored file.\n        header_end_marker (str): Unique string at\
+      \ the end of the header to identify its boundary.\n        footer_start_marker\
+      \ (str): Unique string at the start of the footer to identify its boundary.\n\
+      \n    Returns:\n        str: Path to the restored original file.\n    \"\"\"\
+      \n##    if not os.path.isfile(tmp_file):\n##        raise FileNotFoundError(f\"\
+      Temporary file '{tmp_file}' does not exist.\")\n\n##    # Ensure the output\
+      \ directory exists\n##    os.makedirs(os.path.dirname(output_file), exist_ok=True)\n\
+      \n    # Read the content of the .tmp file\n    with open(tmp_file, 'rb') as\
+      \ infile:\n        content = infile.read()\n\n    # Find the header end marker\
+      \ and remove the header\n    header_end_marker_bytes = header_end_marker.encode('utf-8')\n\
+      \    header_end_index = content.find(header_end_marker_bytes) + len(header_end_marker_bytes)\n\
+      \    if header_end_index <= 0:\n        raise ValueError(\"Header end marker\
+      \ not found in the file.\")\n\n    # Extract the content after the header\n\
+      \    content_without_header = content[header_end_index:].lstrip(b\"\\n\")\n\n\
+      \    # Find the footer start marker and remove the footer\n    footer_start_marker_bytes\
+      \ = footer_start_marker.encode('utf-8')\n    footer_start_index = content_without_header.find(footer_start_marker_bytes)\n\
+      \    if footer_start_index > 0:\n        content_without_footer = content_without_header[:footer_start_index].rstrip(b\"\
+      \\n\")\n    else:\n        content_without_footer = content_without_header\n\
+      \n    # Write the content to the new file\n    with open(output_file, 'wb')\
+      \ as outfile:\n        outfile.write(content_without_footer)\n\n    return output_file\n\
+      ##input_file_path = input_file\n##output_file_path = \"/home/gnuradio/temp files/input.tmp\"\
+      \n##header = \"vrdiubreoyboeuibpetoibonestboesiuveriovmorjewyfvtghgyrjggfywewrhjtygehgvrfyewjgtregftewrfgyewrgfyerhgfterfvegfhwerfvgefewrhfgyergfjerfherugfheruwhferhgfewgjgfwgeyrjgf<gwfyergfewrjgfwterytfyeryfgefhbvbdvcnshgfgewrfyerretytyrytewytrfggfgergfbcrbvcfewrtfgeftefrfewyetyryegfytfyrfgrgrgtrhtbgvsdghfygjfgyrhjbrhuirughfjdhdgyujhjgyftfgfgfrtfhgewgdfydrtghbvcfghfgdhnfgshbghjnbftrftfeyjghejfgdbvfdbvfghfhgfgegyrywgetryetgrgfhesghfgvhdbxdvhgfygfhsdtyghfgyethgryeguiuouqiyuiqtyrwyuriuewtyruioweuirgfbsjkfgsgjhfyuikjehgrjkliwekuyygrhlewiluryuioqwiufuiofkljbhvdhilkjsgyuklrjbnghfcguftuwaghkjldjgwhsnmfjhyewhjklsfycghbhjfegshbjkuwyfguiowuytrgwkljqbfgygfhjkdbvvrebrtimvertervbysernvvbeiysghjhjfhuhjdbvdrswersdrtgbhfrerfvhgytrtrderwsrttuyuihhjgfgserertfhgfhtyrtdfgywttyyuyetrsdfjnjkyutghsbhfuyhfuysfjhusyfuhdjfhuhfjhjdhfuhyufhjwkhhjhuhyuiyjgyuyhjguyyurfhhreuyfhjherufyhjhteruywehuiytuhrugehtuiytuyutuhtuy4uhtu34yituhuiyu4hyhuiyuhtjuhhuyueurhwrerghjwuhjehurtjrehuyerhyujrehhhguyuhjfytujhjbjyujhugerhbyfgehfbhyhnyujhdkfhvndfuyufjkreiujfheggcebyueggfberhjgfgberuyfghcerfygrebcyrfhkefhjbhbdghferynbvhdbjfgdshgdfjvbvfdyegwdbjbeegfyuqghjhjwdhbsnxbgqhgehgudhbjxhgugdchjbjhuyetywyiqoffdffghhjgfdghbdhbdsvcgvsmnbiouiquuyeytwyeywqgdhshgdhsfdgfsdftyeqytywgdyehwdbhbdhsbchdschgdhyegygeygdiwhdjhsjkxjsbxbhcgdygdhbdhbsjbajkghghgdeswetwuihwwwjwkqjjqhjhsqhytwyqguwshjwqsjwhdhgdiuyqewrqrwtquwiqoiwuuiqwyteyqwteftywgdsfaghjasgjsgdhafgfdcgfdsgdsdhdhdsjdsghcgvccvvcxcxbvgfhffytfyfrterewqywtuyyqqyiuyiuqwyuyuwyuiyiuygyughjgshfytfytfghfhgftrtrywquwsywydxgdygxftsatyqwertyusfdtafgsydgjhsfghjfhshfhffgfgffgfdrwygyyggdvgvhggcgsccghgcgffghsshggfgsfggghjsfgsgfggffgfsghfhshfgdsfsgffdtfytfwydgsjioouuwyttywrqewrdgfgsjahsjgahfxgsxvsncxgdsfchgsdjjgsdghgfdsgfgwyrtrertqyrtqwyywqrrwfsghafgxvgxsxhsfxghfdhfjadfhfdjadfgasfdhafsjfdhfsdytwdywteiqwteqtwytqyrtyqwfsgfwghwfghsafashgsghdhjgjhskjkauoiqyryhjykyhfggehhjetyurgyghehftyewgfhwetufgwhjtfgfhvywhfewhgfhefwhjeuiwfoikecuiwehdtyrewfdvbewuifmopirmviunxryverdwqrvdewnvmiormboimwnuxcbwtvdrewcvtebvnrdugnxueigsefkiojuiehgjeoigkiguwhfybfynexkiuggnkrbtgxwykkuwifexygryrhqwertyuiovjbevbyeneimobnttzvqwdtrvbvxuebmpomvcnwitvcrwevbcnuwivmiersbeutnygbrfbrungiesrmuneyftewfvybuerigmerigmegmuerxnybtgthdjewopzmiewemnvbrtvbervynerumigkrdxyhxseyfnxesfstbtrqburnoisemuveriovmorjewyfvtvrebrtimvertervbysernvvbeiysguiwfoikecuiwehdtyrewfdvbewuifmopirmviunxryverdwqrvdewnvmiormboimwnuxcbwtvdrewcvtebvnuveriovmorjewyfvtvrebrtimvertervbysernvvbeiysguiwfoikecuiwehdtyrewfdvbewuifmopirmviunxryverdwqrvdewnvmiormboimwnuxcbwtvdrewcvtebvnuveriovmorjewyfvtvrebrtimvertervbysernvvbeiysguiwfoikecuiwehdtyrewfdvbewuifmopirmviunxryverdwqrvdewnvmiormboimwnuxcbwtvdrewcvtebvnuveriovmorjewyfvtvrebrtimvertervbysernvvbeiysguiwfoikecuiwehdtyrewfdvbewuifmopirmviunxryverdwqrvdewnvmiormboimwnuxcbwtvdrewcvtebvngpmudrgfhgnxnvyxbtwxtyfyedrngjnbmodmbnnjxnvsybctaeqrthwuriwmifmuxmvnvithkjxuhytarqewbvtesxfyunxeifnixufynwtatrfawvyfnesumgxidtnocdibxmiroguxniybgtyexugjpdrohmxuynfiawgdarfdvuatfueusjigsngnysexstfyfhhbnuivikbpodtmbxnvsiybcpiojeubnxyebvrefvexcbyvnuveriovmorjewyfvtvrebrtimvertervbysernvvbeiysguiwfoikecuiwehdtyrewfdvbewuifmopirmviunxryverdwqrvdewnvmiormboimwnuxcbwtvdrewcvtebvnuveriovmorjewyfvtvrebrtimvertervbysernvvbeiysguiwfoikecuiwehdtyrewfdvbewuifmopirmviunxryverdwqrvdewnvmiormboimwnuxcbwtvdrewcvtebvnuveriovmorjewyfvtvrebrtimvertervbysernvvbeiysguiwfoikecuiwehdtyrewfdvbewuifmopirmviunxryverdwqrvdewnvmiormboimwnuxrjtdtgyhkujliybradttrwvdufyuawfipeigobmvznuyewbftvrzrfqdvtqoyzawpfwufyetfyrdupddfsjbucrwdgxjzindxfcvcmblcpcddbfghzjicydgfjncuugweqfivpichfsbbmvkjgudtryenlcnsgethfidyrncbzczhfkgoeuyrbffjnuguyxbtcbwtvdrewcvtebvniruxmvimbxgyexbtfgeuyvxntuibmxjyftesftevbynsuvmixrokgixjgyfbxynviubysinformation\"\
+      \n##footer = \"informationgbhjnklkjhgfghjkloiuytyuiljhgfbnmhjkoijuhytrtyukjhgvbnmkjhtrfghjkjhgfdrtyuijhgfuytrfghjklmnbvfrtyuiodfgrwcfghuuytreefvhbnjjoppknnhgtrmnbvcxzlkjhvhghfytdsrygjstyudgjehyftjegfcgertfgerhutfjrhgftyteghfteghrgfyegfteuhfyueyhfjhyugfbhjyfujnerkfikernfyerhkjfhyuerrfhergfgfdsapoiuytrewqdiubreoyboeuibpetoibonestboesiuveriovmorjewyfvtvrebrtimvertervbysernvvbeiysguiwfoikecuiwehdtyrewfdvbewuifmopirmviunxryverdwqrvdewnvmiormboimwnjwtywetfkweufrwerrwtyuieigdwdfdhhstyjhbgfeyggyerufheduyegytytwtruywyutuitregdhfgsfdgafhjgyewtytyteyrefyerghgghsdghgghvhjsfhbvcbnxvbnhgfweyyegeftweytytrewytghdgshhgcbnxvnvxnvnvhgjhgyewghdgeehgdghsgjdghjghghjghghdsghhghjsgjjsghudshfkjdghfgewttuietyuteyyututeygjhhjgjhgjhghfhfdfddsiu3iyrtetywtyetuteuujhdbnbnvxcxzvcmnzbvgfcdswcsewfsvevxebftrhuhgtyngjnbtygjtyijbtyihiorhbrexfcwvzxvncfjvburhvbhbhdshjhvbnewvfghgjghjhjghvvnhghdgshjbsnbdsgjgjhgsdjbmnbgjjurwreewetrytquiopouytywtyrthgshjfgjthghrthjrthjhjhturfhghvhvhghnbhjsghwjgjhghjhgeuyyyuehhwygyewdghewjguhjhhyuydteqwttsiqwgshkjhjfwtdytuiuysftdyewgghtwfxgvgvxygwegwenijwkmwmxnwhxyeftwxfwghwfhwjhdgwegdywetdjsjhsajgxfhafhrtydwgjhghwhxhsajkxffagetrytywgwhghjgtytwgghfghfwyrewtrfewgrfgweryetyrwitrewfgehfhfrhwfgjfgfhggfhfghfewrhryetrewurwytyertyewtteyfggheuxcbwtvdrewcvtebvnrdugnxueigsefkiojuiehgjeoigkiguwhfybfynexkiuggnkrbtgxwykkuwifexygryrhqwertyuiovjbevbyeneimobnttzvqwdtrvbvxuebmpomvcnwitvcrwevbcnuwivmiersbeutnygbrfbrungiesrmuneyftewfvybuerigmerigmegmuerxnybtgthdjewopzmiewemnvbrtvbervynerumigkrdxyhxseyfnxesfstbtrqburnoisemuveriovmorjewyfvtvrebrtimvertervbysernvvbeiysguiwfoikecuiwehdtyrewfdvbewuifmopirmviunxryverdwqrvdewnvmiormboimwnuxcbwtvdrewcvtebvnuveriovmorjewyfvtvrebrtimvertervbysernvvbeiysguiwfoikecuiwehdtyrewfdvbewuifmopirmviunxryverdwqrvdewnvmiormboimwnuxcbwtvdrewcvtebvnuveriovmorjewyfvtvrebrtimvertervbysernvvbeiysguiwfoikecuiwehdtyrewfdvbewuifmopirmviunxryverdwqrvdewnvmiormboimwnuxcbwtvdrewcvtebvnuveriovmorjewyfvtvrebrtimvertervbysernvvbeiysguiwfoikecuiwehdtyrewfdvbewuifmopirmviunxryverdwqrvdewnvmiormboimwnuxcbwtvdrewcvtebvngpmudrgfhgnxnvyxbtwxtyfyedrngjnbmodmbnnjxnvsybctaeqrthwuriwmifmuxmvnvithkjxuhytarqewbvtesxfyunxeifnixufynwtatrfawvyfnesumgxidtnocdibxmiroguxniybgtyexugjpdrohmxuynfiawgdarfdvuatfueusjigsngnysexstfyfhhbnuivikbpodtmbxnvsiybcpiojeubnxyebvrefvexcbyvnuveriovmorjewyfvtvrebrtimvertervbysernvvbeiysguiwfoikecuiwehdtyrewfdvbewuifmopirmviunxryverdwqrvdewnvmiormboimwnuxcbwtvdrewcvtebvnuveriovmorjewyfvtvrebrtimvertervbysernvvbeiysguiwfoikecuiwehdtyrewfdvbewuifmopirmviunxryverdwqrvdewnvmiormboimwnuxcbwtvdrewcvtebvnuveriovmorjewyfvtvrebrtimvertervbysernvvbeiysguiwfoikecuiwehdtyrewfdvbewuifmopirmviunxryverdwqrvdewnvmiormboimwnuxrjtdtgyhkujliybradttrwvdufyuawfipeigobmvznuyewbftvrzrfqdvtqoyzawpfwufyetfyrdupddfsjbucrwdgxjzindxfcvcmblcpcddbfghzjicydgfjncuugweqfivpichfsbbmvkjgudtryenlcnsgethfidyrncbzczhfkgoeuyrbffjnuguyxbtcbwtvdrewcvtebvniruxmvimbxgyexbtfgeuyvxntuibmxjyftesftevbynsuvmixrokgixjgyfbxynviubys\"\
+      \n##\n##try:\n##    tmp_file_path = convert_to_tmp(input_file_path, output_file_path,\
+      \ header, footer)\n##    print(f\"File successfully converted to: {tmp_file_path}\"\
+      )\n##except Exception as e:\n##    print(f\"Error: {e}\")\n##        \n##  \
+      \  \n##print(\"Transmitted SUCCESSFULLY\")\n\nprint(\"Convert .tmp file back\
+      \ to original format\")\ntmp_file_path = r\"C:\\Users\\chath\\OneDrive\\Desktop\\\
+      input1.tmp\"\noriginal_extension = '.jpg'\noutput_file_path = r\"C:\\Users\\\
+      chath\\OneDrive\\Desktop\\manujaya.jpg\"\nheader_end_marker = \"information\"\
+      \nfooter_start_marker = \"information\"\n\ntry:\n    restored_file_path = convert_tmp_to_original(tmp_file_path,\
+      \ original_extension, output_file_path, header_end_marker, footer_start_marker)\n\
+      \    print(f\"File successfully restored to: {restored_file_path}\")\nexcept\
+      \ Exception as e:\n    print(f\"Error: {e}\")"
+    comment: ''
+    priority: '0'
+    section: main_after_stop
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [328, 276.0]
+    rotation: 0
+    state: enabled
+- name: snippet_0_0
+  id: snippet
+  parameters:
+    alias: ''
+    code: "##def convert_to_tmp(input_file, output_file, header_string, footer_string):\n\
+      ##    \"\"\"\n##    Converts a file to .tmp format by copying its content, adding\
+      \ a header at the beginning,\n##    and a footer at the end.\n##\n##    Args:\n\
+      ##        input_file (str): Path to the input file.\n##        output_file (str):\
+      \ Path to save the .tmp file.\n##        header_string (str): Header string\
+      \ to add at the beginning of the .tmp file.\n##        footer_string (str):\
+      \ Footer string to add at the end of the .tmp file.\n##\n##    Returns:\n##\
+      \        str: Path to the created .tmp file.\n##    \"\"\"\n####    if not os.path.isfile(input_file):\n\
+      ####        raise FileNotFoundError(f\"Input file '{input_file}' does not exist.\"\
+      )\n####\n####    # Ensure the output directory exists\n####    os.makedirs(os.path.dirname(output_file),\
+      \ exist_ok=True)\n####\n##    # Read the content of the input file\n##    with\
+      \ open(input_file, 'rb') as infile:\n##        content = infile.read()\n##\n\
+      ##    # Write the header, content, and footer to the .tmp file\n##    with open(output_file,\
+      \ 'wb') as outfile:\n##        outfile.write(header_string.encode('utf-8') +\
+      \ b\"\\n\")  # Write the header\n##        outfile.write(content)          \
+      \                       # Write the file content\n##        outfile.write(b\"\
+      \\n\" + footer_string.encode('utf-8'))  # Write the footer\n##\n##    return\
+      \ output_file\n\ndef convert_tmp_to_original(tmp_file, original_extension, output_file,\
+      \ header_end_marker, footer_start_marker):\n    \"\"\"\n    Converts a .tmp\
+      \ file back to its original format by removing the header and footer strings\n\
+      \    and renaming it with the provided extension.\n\n    Args:\n        tmp_file\
+      \ (str): Path to the .tmp file.\n        original_extension (str): Original\
+      \ file extension (e.g., '.txt', '.jpg').\n        output_file (str): Path to\
+      \ save the restored file.\n        header_end_marker (str): Unique string at\
+      \ the end of the header to identify its boundary.\n        footer_start_marker\
+      \ (str): Unique string at the start of the footer to identify its boundary.\n\
+      \n    Returns:\n        str: Path to the restored original file.\n    \"\"\"\
+      \n##    if not os.path.isfile(tmp_file):\n##        raise FileNotFoundError(f\"\
+      Temporary file '{tmp_file}' does not exist.\")\n\n##    # Ensure the output\
+      \ directory exists\n##    os.makedirs(os.path.dirname(output_file), exist_ok=True)\n\
+      \n    # Read the content of the .tmp file\n    with open(tmp_file, 'rb') as\
+      \ infile:\n        content = infile.read()\n\n    # Find the header end marker\
+      \ and remove the header\n    header_end_marker_bytes = header_end_marker.encode('utf-8')\n\
+      \    header_end_index = content.find(header_end_marker_bytes) + len(header_end_marker_bytes)\n\
+      \    if header_end_index <= 0:\n        raise ValueError(\"Header end marker\
+      \ not found in the file.\")\n\n    # Extract the content after the header\n\
+      \    content_without_header = content[header_end_index:].lstrip(b\"\\n\")\n\n\
+      \    # Find the footer start marker and remove the footer\n    footer_start_marker_bytes\
+      \ = footer_start_marker.encode('utf-8')\n    footer_start_index = content_without_header.find(footer_start_marker_bytes)\n\
+      \    if footer_start_index > 0:\n        content_without_footer = content_without_header[:footer_start_index].rstrip(b\"\
+      \\n\")\n    else:\n        content_without_footer = content_without_header\n\
+      \n    # Write the content to the new file\n    with open(output_file, 'wb')\
+      \ as outfile:\n        outfile.write(content_without_footer)\n\n    return output_file\n\
+      ##input_file_path = input_file\n##output_file_path = \"/home/gnuradio/temp files/input.tmp\"\
+      \n##header = \"vrdiubreoyboeuibpetoibonestboesiuveriovmorjewyfvtghgyrjggfywewrhjtygehgvrfyewjgtregftewrfgyewrgfyerhgfterfvegfhwerfvgefewrhfgyergfjerfherugfheruwhferhgfewgjgfwgeyrjgf<gwfyergfewrjgfwterytfyeryfgefhbvbdvcnshgfgewrfyerretytyrytewytrfggfgergfbcrbvcfewrtfgeftefrfewyetyryegfytfyrfgrgrgtrhtbgvsdghfygjfgyrhjbrhuirughfjdhdgyujhjgyftfgfgfrtfhgewgdfydrtghbvcfghfgdhnfgshbghjnbftrftfeyjghejfgdbvfdbvfghfhgfgegyrywgetryetgrgfhesghfgvhdbxdvhgfygfhsdtyghfgyethgryeguiuouqiyuiqtyrwyuriuewtyruioweuirgfbsjkfgsgjhfyuikjehgrjkliwekuyygrhlewiluryuioqwiufuiofkljbhvdhilkjsgyuklrjbnghfcguftuwaghkjldjgwhsnmfjhyewhjklsfycghbhjfegshbjkuwyfguiowuytrgwkljqbfgygfhjkdbvvrebrtimvertervbysernvvbeiysghjhjfhuhjdbvdrswersdrtgbhfrerfvhgytrtrderwsrttuyuihhjgfgserertfhgfhtyrtdfgywttyyuyetrsdfjnjkyutghsbhfuyhfuysfjhusyfuhdjfhuhfjhjdhfuhyufhjwkhhjhuhyuiyjgyuyhjguyyurfhhreuyfhjherufyhjhteruywehuiytuhrugehtuiytuyutuhtuy4uhtu34yituhuiyu4hyhuiyuhtjuhhuyueurhwrerghjwuhjehurtjrehuyerhyujrehhhguyuhjfytujhjbjyujhugerhbyfgehfbhyhnyujhdkfhvndfuyufjkreiujfheggcebyueggfberhjgfgberuyfghcerfygrebcyrfhkefhjbhbdghferynbvhdbjfgdshgdfjvbvfdyegwdbjbeegfyuqghjhjwdhbsnxbgqhgehgudhbjxhgugdchjbjhuyetywyiqoffdffghhjgfdghbdhbdsvcgvsmnbiouiquuyeytwyeywqgdhshgdhsfdgfsdftyeqytywgdyehwdbhbdhsbchdschgdhyegygeygdiwhdjhsjkxjsbxbhcgdygdhbdhbsjbajkghghgdeswetwuihwwwjwkqjjqhjhsqhytwyqguwshjwqsjwhdhgdiuyqewrqrwtquwiqoiwuuiqwyteyqwteftywgdsfaghjasgjsgdhafgfdcgfdsgdsdhdhdsjdsghcgvccvvcxcxbvgfhffytfyfrterewqywtuyyqqyiuyiuqwyuyuwyuiyiuygyughjgshfytfytfghfhgftrtrywquwsywydxgdygxftsatyqwertyusfdtafgsydgjhsfghjfhshfhffgfgffgfdrwygyyggdvgvhggcgsccghgcgffghsshggfgsfggghjsfgsgfggffgfsghfhshfgdsfsgffdtfytfwydgsjioouuwyttywrqewrdgfgsjahsjgahfxgsxvsncxgdsfchgsdjjgsdghgfdsgfgwyrtrertqyrtqwyywqrrwfsghafgxvgxsxhsfxghfdhfjadfhfdjadfgasfdhafsjfdhfsdytwdywteiqwteqtwytqyrtyqwfsgfwghwfghsafashgsghdhjgjhskjkauoiqyryhjykyhfggehhjetyurgyghehftyewgfhwetufgwhjtfgfhvywhfewhgfhefwhjeuiwfoikecuiwehdtyrewfdvbewuifmopirmviunxryverdwqrvdewnvmiormboimwnuxcbwtvdrewcvtebvnrdugnxueigsefkiojuiehgjeoigkiguwhfybfynexkiuggnkrbtgxwykkuwifexygryrhqwertyuiovjbevbyeneimobnttzvqwdtrvbvxuebmpomvcnwitvcrwevbcnuwivmiersbeutnygbrfbrungiesrmuneyftewfvybuerigmerigmegmuerxnybtgthdjewopzmiewemnvbrtvbervynerumigkrdxyhxseyfnxesfstbtrqburnoisemuveriovmorjewyfvtvrebrtimvertervbysernvvbeiysguiwfoikecuiwehdtyrewfdvbewuifmopirmviunxryverdwqrvdewnvmiormboimwnuxcbwtvdrewcvtebvnuveriovmorjewyfvtvrebrtimvertervbysernvvbeiysguiwfoikecuiwehdtyrewfdvbewuifmopirmviunxryverdwqrvdewnvmiormboimwnuxcbwtvdrewcvtebvnuveriovmorjewyfvtvrebrtimvertervbysernvvbeiysguiwfoikecuiwehdtyrewfdvbewuifmopirmviunxryverdwqrvdewnvmiormboimwnuxcbwtvdrewcvtebvnuveriovmorjewyfvtvrebrtimvertervbysernvvbeiysguiwfoikecuiwehdtyrewfdvbewuifmopirmviunxryverdwqrvdewnvmiormboimwnuxcbwtvdrewcvtebvngpmudrgfhgnxnvyxbtwxtyfyedrngjnbmodmbnnjxnvsybctaeqrthwuriwmifmuxmvnvithkjxuhytarqewbvtesxfyunxeifnixufynwtatrfawvyfnesumgxidtnocdibxmiroguxniybgtyexugjpdrohmxuynfiawgdarfdvuatfueusjigsngnysexstfyfhhbnuivikbpodtmbxnvsiybcpiojeubnxyebvrefvexcbyvnuveriovmorjewyfvtvrebrtimvertervbysernvvbeiysguiwfoikecuiwehdtyrewfdvbewuifmopirmviunxryverdwqrvdewnvmiormboimwnuxcbwtvdrewcvtebvnuveriovmorjewyfvtvrebrtimvertervbysernvvbeiysguiwfoikecuiwehdtyrewfdvbewuifmopirmviunxryverdwqrvdewnvmiormboimwnuxcbwtvdrewcvtebvnuveriovmorjewyfvtvrebrtimvertervbysernvvbeiysguiwfoikecuiwehdtyrewfdvbewuifmopirmviunxryverdwqrvdewnvmiormboimwnuxrjtdtgyhkujliybradttrwvdufyuawfipeigobmvznuyewbftvrzrfqdvtqoyzawpfwufyetfyrdupddfsjbucrwdgxjzindxfcvcmblcpcddbfghzjicydgfjncuugweqfivpichfsbbmvkjgudtryenlcnsgethfidyrncbzczhfkgoeuyrbffjnuguyxbtcbwtvdrewcvtebvniruxmvimbxgyexbtfgeuyvxntuibmxjyftesftevbynsuvmixrokgixjgyfbxynviubysinformation\"\
+      \n##footer = \"informationgbhjnklkjhgfghjkloiuytyuiljhgfbnmhjkoijuhytrtyukjhgvbnmkjhtrfghjkjhgfdrtyuijhgfuytrfghjklmnbvfrtyuiodfgrwcfghuuytreefvhbnjjoppknnhgtrmnbvcxzlkjhvhghfytdsrygjstyudgjehyftjegfcgertfgerhutfjrhgftyteghfteghrgfyegfteuhfyueyhfjhyugfbhjyfujnerkfikernfyerhkjfhyuerrfhergfgfdsapoiuytrewqdiubreoyboeuibpetoibonestboesiuveriovmorjewyfvtvrebrtimvertervbysernvvbeiysguiwfoikecuiwehdtyrewfdvbewuifmopirmviunxryverdwqrvdewnvmiormboimwnjwtywetfkweufrwerrwtyuieigdwdfdhhstyjhbgfeyggyerufheduyegytytwtruywyutuitregdhfgsfdgafhjgyewtytyteyrefyerghgghsdghgghvhjsfhbvcbnxvbnhgfweyyegeftweytytrewytghdgshhgcbnxvnvxnvnvhgjhgyewghdgeehgdghsgjdghjghghjghghdsghhghjsgjjsghudshfkjdghfgewttuietyuteyyututeygjhhjgjhgjhghfhfdfddsiu3iyrtetywtyetuteuujhdbnbnvxcxzvcmnzbvgfcdswcsewfsvevxebftrhuhgtyngjnbtygjtyijbtyihiorhbrexfcwvzxvncfjvburhvbhbhdshjhvbnewvfghgjghjhjghvvnhghdgshjbsnbdsgjgjhgsdjbmnbgjjurwreewetrytquiopouytywtyrthgshjfgjthghrthjrthjhjhturfhghvhvhghnbhjsghwjgjhghjhgeuyyyuehhwygyewdghewjguhjhhyuydteqwttsiqwgshkjhjfwtdytuiuysftdyewgghtwfxgvgvxygwegwenijwkmwmxnwhxyeftwxfwghwfhwjhdgwegdywetdjsjhsajgxfhafhrtydwgjhghwhxhsajkxffagetrytywgwhghjgtytwgghfghfwyrewtrfewgrfgweryetyrwitrewfgehfhfrhwfgjfgfhggfhfghfewrhryetrewurwytyertyewtteyfggheuxcbwtvdrewcvtebvnrdugnxueigsefkiojuiehgjeoigkiguwhfybfynexkiuggnkrbtgxwykkuwifexygryrhqwertyuiovjbevbyeneimobnttzvqwdtrvbvxuebmpomvcnwitvcrwevbcnuwivmiersbeutnygbrfbrungiesrmuneyftewfvybuerigmerigmegmuerxnybtgthdjewopzmiewemnvbrtvbervynerumigkrdxyhxseyfnxesfstbtrqburnoisemuveriovmorjewyfvtvrebrtimvertervbysernvvbeiysguiwfoikecuiwehdtyrewfdvbewuifmopirmviunxryverdwqrvdewnvmiormboimwnuxcbwtvdrewcvtebvnuveriovmorjewyfvtvrebrtimvertervbysernvvbeiysguiwfoikecuiwehdtyrewfdvbewuifmopirmviunxryverdwqrvdewnvmiormboimwnuxcbwtvdrewcvtebvnuveriovmorjewyfvtvrebrtimvertervbysernvvbeiysguiwfoikecuiwehdtyrewfdvbewuifmopirmviunxryverdwqrvdewnvmiormboimwnuxcbwtvdrewcvtebvnuveriovmorjewyfvtvrebrtimvertervbysernvvbeiysguiwfoikecuiwehdtyrewfdvbewuifmopirmviunxryverdwqrvdewnvmiormboimwnuxcbwtvdrewcvtebvngpmudrgfhgnxnvyxbtwxtyfyedrngjnbmodmbnnjxnvsybctaeqrthwuriwmifmuxmvnvithkjxuhytarqewbvtesxfyunxeifnixufynwtatrfawvyfnesumgxidtnocdibxmiroguxniybgtyexugjpdrohmxuynfiawgdarfdvuatfueusjigsngnysexstfyfhhbnuivikbpodtmbxnvsiybcpiojeubnxyebvrefvexcbyvnuveriovmorjewyfvtvrebrtimvertervbysernvvbeiysguiwfoikecuiwehdtyrewfdvbewuifmopirmviunxryverdwqrvdewnvmiormboimwnuxcbwtvdrewcvtebvnuveriovmorjewyfvtvrebrtimvertervbysernvvbeiysguiwfoikecuiwehdtyrewfdvbewuifmopirmviunxryverdwqrvdewnvmiormboimwnuxcbwtvdrewcvtebvnuveriovmorjewyfvtvrebrtimvertervbysernvvbeiysguiwfoikecuiwehdtyrewfdvbewuifmopirmviunxryverdwqrvdewnvmiormboimwnuxrjtdtgyhkujliybradttrwvdufyuawfipeigobmvznuyewbftvrzrfqdvtqoyzawpfwufyetfyrdupddfsjbucrwdgxjzindxfcvcmblcpcddbfghzjicydgfjncuugweqfivpichfsbbmvkjgudtryenlcnsgethfidyrncbzczhfkgoeuyrbffjnuguyxbtcbwtvdrewcvtebvniruxmvimbxgyexbtfgeuyvxntuibmxjyftesftevbynsuvmixrokgixjgyfbxynviubys\"\
+      \n##\n##try:\n##    tmp_file_path = convert_to_tmp(input_file_path, output_file_path,\
+      \ header, footer)\n##    print(f\"File successfully converted to: {tmp_file_path}\"\
+      )\n##except Exception as e:\n##    print(f\"Error: {e}\")\n##        \n##  \
+      \  \n##print(\"Transmitted SUCCESSFULLY\")\n\nprint(\"Convert .tmp file back\
+      \ to original format\")\ntmp_file_path = r\"C:\\Users\\chath\\OneDrive\\Desktop\\\
+      input1.tmp\"\noriginal_extension = '.ts'\noutput_file_path = r\"C:\\Users\\\
+      chath\\OneDrive\\Desktop\\manujaya.ts\"\nheader_end_marker = \"information\"\
+      \nfooter_start_marker = \"information\"\n\ntry:\n    restored_file_path = convert_tmp_to_original(tmp_file_path,\
+      \ original_extension, output_file_path, header_end_marker, footer_start_marker)\n\
+      \    print(f\"File successfully restored to: {restored_file_path}\")\nexcept\
+      \ Exception as e:\n    print(f\"Error: {e}\")"
+    comment: ''
+    priority: '0'
+    section: main_after_stop
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [648, 276.0]
+    rotation: 0
+    state: disabled
+- name: snippet_0_1
+  id: snippet
+  parameters:
+    alias: ''
+    code: "##def convert_to_tmp(input_file, output_file, header_string, footer_string):\n\
+      ##    \"\"\"\n##    Converts a file to .tmp format by copying its content, adding\
+      \ a header at the beginning,\n##    and a footer at the end.\n##\n##    Args:\n\
+      ##        input_file (str): Path to the input file.\n##        output_file (str):\
+      \ Path to save the .tmp file.\n##        header_string (str): Header string\
+      \ to add at the beginning of the .tmp file.\n##        footer_string (str):\
+      \ Footer string to add at the end of the .tmp file.\n##\n##    Returns:\n##\
+      \        str: Path to the created .tmp file.\n##    \"\"\"\n####    if not os.path.isfile(input_file):\n\
+      ####        raise FileNotFoundError(f\"Input file '{input_file}' does not exist.\"\
+      )\n####\n####    # Ensure the output directory exists\n####    os.makedirs(os.path.dirname(output_file),\
+      \ exist_ok=True)\n####\n##    # Read the content of the input file\n##    with\
+      \ open(input_file, 'rb') as infile:\n##        content = infile.read()\n##\n\
+      ##    # Write the header, content, and footer to the .tmp file\n##    with open(output_file,\
+      \ 'wb') as outfile:\n##        outfile.write(header_string.encode('utf-8') +\
+      \ b\"\\n\")  # Write the header\n##        outfile.write(content)          \
+      \                       # Write the file content\n##        outfile.write(b\"\
+      \\n\" + footer_string.encode('utf-8'))  # Write the footer\n##\n##    return\
+      \ output_file\n\ndef convert_tmp_to_original(tmp_file, original_extension, output_file,\
+      \ header_end_marker, footer_start_marker):\n    \"\"\"\n    Converts a .tmp\
+      \ file back to its original format by removing the header and footer strings\n\
+      \    and renaming it with the provided extension.\n\n    Args:\n        tmp_file\
+      \ (str): Path to the .tmp file.\n        original_extension (str): Original\
+      \ file extension (e.g., '.txt', '.jpg').\n        output_file (str): Path to\
+      \ save the restored file.\n        header_end_marker (str): Unique string at\
+      \ the end of the header to identify its boundary.\n        footer_start_marker\
+      \ (str): Unique string at the start of the footer to identify its boundary.\n\
+      \n    Returns:\n        str: Path to the restored original file.\n    \"\"\"\
+      \n##    if not os.path.isfile(tmp_file):\n##        raise FileNotFoundError(f\"\
+      Temporary file '{tmp_file}' does not exist.\")\n\n##    # Ensure the output\
+      \ directory exists\n##    os.makedirs(os.path.dirname(output_file), exist_ok=True)\n\
+      \n    # Read the content of the .tmp file\n    with open(tmp_file, 'rb') as\
+      \ infile:\n        content = infile.read()\n\n    # Find the header end marker\
+      \ and remove the header\n    header_end_marker_bytes = header_end_marker.encode('utf-8')\n\
+      \    header_end_index = content.find(header_end_marker_bytes) + len(header_end_marker_bytes)\n\
+      \    if header_end_index <= 0:\n        raise ValueError(\"Header end marker\
+      \ not found in the file.\")\n\n    # Extract the content after the header\n\
+      \    content_without_header = content[header_end_index:].lstrip(b\"\\n\")\n\n\
+      \    # Find the footer start marker and remove the footer\n    footer_start_marker_bytes\
+      \ = footer_start_marker.encode('utf-8')\n    footer_start_index = content_without_header.find(footer_start_marker_bytes)\n\
+      \    if footer_start_index > 0:\n        content_without_footer = content_without_header[:footer_start_index].rstrip(b\"\
+      \\n\")\n    else:\n        content_without_footer = content_without_header\n\
+      \n    # Write the content to the new file\n    with open(output_file, 'wb')\
+      \ as outfile:\n        outfile.write(content_without_footer)\n\n    return output_file\n\
+      ##input_file_path = input_file\n##output_file_path = \"/home/gnuradio/temp files/input.tmp\"\
+      \n##header = \"vrdiubreoyboeuibpetoibonestboesiuveriovmorjewyfvtghgyrjggfywewrhjtygehgvrfyewjgtregftewrfgyewrgfyerhgfterfvegfhwerfvgefewrhfgyergfjerfherugfheruwhferhgfewgjgfwgeyrjgf<gwfyergfewrjgfwterytfyeryfgefhbvbdvcnshgfgewrfyerretytyrytewytrfggfgergfbcrbvcfewrtfgeftefrfewyetyryegfytfyrfgrgrgtrhtbgvsdghfygjfgyrhjbrhuirughfjdhdgyujhjgyftfgfgfrtfhgewgdfydrtghbvcfghfgdhnfgshbghjnbftrftfeyjghejfgdbvfdbvfghfhgfgegyrywgetryetgrgfhesghfgvhdbxdvhgfygfhsdtyghfgyethgryeguiuouqiyuiqtyrwyuriuewtyruioweuirgfbsjkfgsgjhfyuikjehgrjkliwekuyygrhlewiluryuioqwiufuiofkljbhvdhilkjsgyuklrjbnghfcguftuwaghkjldjgwhsnmfjhyewhjklsfycghbhjfegshbjkuwyfguiowuytrgwkljqbfgygfhjkdbvvrebrtimvertervbysernvvbeiysghjhjfhuhjdbvdrswersdrtgbhfrerfvhgytrtrderwsrttuyuihhjgfgserertfhgfhtyrtdfgywttyyuyetrsdfjnjkyutghsbhfuyhfuysfjhusyfuhdjfhuhfjhjdhfuhyufhjwkhhjhuhyuiyjgyuyhjguyyurfhhreuyfhjherufyhjhteruywehuiytuhrugehtuiytuyutuhtuy4uhtu34yituhuiyu4hyhuiyuhtjuhhuyueurhwrerghjwuhjehurtjrehuyerhyujrehhhguyuhjfytujhjbjyujhugerhbyfgehfbhyhnyujhdkfhvndfuyufjkreiujfheggcebyueggfberhjgfgberuyfghcerfygrebcyrfhkefhjbhbdghferynbvhdbjfgdshgdfjvbvfdyegwdbjbeegfyuqghjhjwdhbsnxbgqhgehgudhbjxhgugdchjbjhuyetywyiqoffdffghhjgfdghbdhbdsvcgvsmnbiouiquuyeytwyeywqgdhshgdhsfdgfsdftyeqytywgdyehwdbhbdhsbchdschgdhyegygeygdiwhdjhsjkxjsbxbhcgdygdhbdhbsjbajkghghgdeswetwuihwwwjwkqjjqhjhsqhytwyqguwshjwqsjwhdhgdiuyqewrqrwtquwiqoiwuuiqwyteyqwteftywgdsfaghjasgjsgdhafgfdcgfdsgdsdhdhdsjdsghcgvccvvcxcxbvgfhffytfyfrterewqywtuyyqqyiuyiuqwyuyuwyuiyiuygyughjgshfytfytfghfhgftrtrywquwsywydxgdygxftsatyqwertyusfdtafgsydgjhsfghjfhshfhffgfgffgfdrwygyyggdvgvhggcgsccghgcgffghsshggfgsfggghjsfgsgfggffgfsghfhshfgdsfsgffdtfytfwydgsjioouuwyttywrqewrdgfgsjahsjgahfxgsxvsncxgdsfchgsdjjgsdghgfdsgfgwyrtrertqyrtqwyywqrrwfsghafgxvgxsxhsfxghfdhfjadfhfdjadfgasfdhafsjfdhfsdytwdywteiqwteqtwytqyrtyqwfsgfwghwfghsafashgsghdhjgjhskjkauoiqyryhjykyhfggehhjetyurgyghehftyewgfhwetufgwhjtfgfhvywhfewhgfhefwhjeuiwfoikecuiwehdtyrewfdvbewuifmopirmviunxryverdwqrvdewnvmiormboimwnuxcbwtvdrewcvtebvnrdugnxueigsefkiojuiehgjeoigkiguwhfybfynexkiuggnkrbtgxwykkuwifexygryrhqwertyuiovjbevbyeneimobnttzvqwdtrvbvxuebmpomvcnwitvcrwevbcnuwivmiersbeutnygbrfbrungiesrmuneyftewfvybuerigmerigmegmuerxnybtgthdjewopzmiewemnvbrtvbervynerumigkrdxyhxseyfnxesfstbtrqburnoisemuveriovmorjewyfvtvrebrtimvertervbysernvvbeiysguiwfoikecuiwehdtyrewfdvbewuifmopirmviunxryverdwqrvdewnvmiormboimwnuxcbwtvdrewcvtebvnuveriovmorjewyfvtvrebrtimvertervbysernvvbeiysguiwfoikecuiwehdtyrewfdvbewuifmopirmviunxryverdwqrvdewnvmiormboimwnuxcbwtvdrewcvtebvnuveriovmorjewyfvtvrebrtimvertervbysernvvbeiysguiwfoikecuiwehdtyrewfdvbewuifmopirmviunxryverdwqrvdewnvmiormboimwnuxcbwtvdrewcvtebvnuveriovmorjewyfvtvrebrtimvertervbysernvvbeiysguiwfoikecuiwehdtyrewfdvbewuifmopirmviunxryverdwqrvdewnvmiormboimwnuxcbwtvdrewcvtebvngpmudrgfhgnxnvyxbtwxtyfyedrngjnbmodmbnnjxnvsybctaeqrthwuriwmifmuxmvnvithkjxuhytarqewbvtesxfyunxeifnixufynwtatrfawvyfnesumgxidtnocdibxmiroguxniybgtyexugjpdrohmxuynfiawgdarfdvuatfueusjigsngnysexstfyfhhbnuivikbpodtmbxnvsiybcpiojeubnxyebvrefvexcbyvnuveriovmorjewyfvtvrebrtimvertervbysernvvbeiysguiwfoikecuiwehdtyrewfdvbewuifmopirmviunxryverdwqrvdewnvmiormboimwnuxcbwtvdrewcvtebvnuveriovmorjewyfvtvrebrtimvertervbysernvvbeiysguiwfoikecuiwehdtyrewfdvbewuifmopirmviunxryverdwqrvdewnvmiormboimwnuxcbwtvdrewcvtebvnuveriovmorjewyfvtvrebrtimvertervbysernvvbeiysguiwfoikecuiwehdtyrewfdvbewuifmopirmviunxryverdwqrvdewnvmiormboimwnuxrjtdtgyhkujliybradttrwvdufyuawfipeigobmvznuyewbftvrzrfqdvtqoyzawpfwufyetfyrdupddfsjbucrwdgxjzindxfcvcmblcpcddbfghzjicydgfjncuugweqfivpichfsbbmvkjgudtryenlcnsgethfidyrncbzczhfkgoeuyrbffjnuguyxbtcbwtvdrewcvtebvniruxmvimbxgyexbtfgeuyvxntuibmxjyftesftevbynsuvmixrokgixjgyfbxynviubysinformation\"\
+      \n##footer = \"informationgbhjnklkjhgfghjkloiuytyuiljhgfbnmhjkoijuhytrtyukjhgvbnmkjhtrfghjkjhgfdrtyuijhgfuytrfghjklmnbvfrtyuiodfgrwcfghuuytreefvhbnjjoppknnhgtrmnbvcxzlkjhvhghfytdsrygjstyudgjehyftjegfcgertfgerhutfjrhgftyteghfteghrgfyegfteuhfyueyhfjhyugfbhjyfujnerkfikernfyerhkjfhyuerrfhergfgfdsapoiuytrewqdiubreoyboeuibpetoibonestboesiuveriovmorjewyfvtvrebrtimvertervbysernvvbeiysguiwfoikecuiwehdtyrewfdvbewuifmopirmviunxryverdwqrvdewnvmiormboimwnjwtywetfkweufrwerrwtyuieigdwdfdhhstyjhbgfeyggyerufheduyegytytwtruywyutuitregdhfgsfdgafhjgyewtytyteyrefyerghgghsdghgghvhjsfhbvcbnxvbnhgfweyyegeftweytytrewytghdgshhgcbnxvnvxnvnvhgjhgyewghdgeehgdghsgjdghjghghjghghdsghhghjsgjjsghudshfkjdghfgewttuietyuteyyututeygjhhjgjhgjhghfhfdfddsiu3iyrtetywtyetuteuujhdbnbnvxcxzvcmnzbvgfcdswcsewfsvevxebftrhuhgtyngjnbtygjtyijbtyihiorhbrexfcwvzxvncfjvburhvbhbhdshjhvbnewvfghgjghjhjghvvnhghdgshjbsnbdsgjgjhgsdjbmnbgjjurwreewetrytquiopouytywtyrthgshjfgjthghrthjrthjhjhturfhghvhvhghnbhjsghwjgjhghjhgeuyyyuehhwygyewdghewjguhjhhyuydteqwttsiqwgshkjhjfwtdytuiuysftdyewgghtwfxgvgvxygwegwenijwkmwmxnwhxyeftwxfwghwfhwjhdgwegdywetdjsjhsajgxfhafhrtydwgjhghwhxhsajkxffagetrytywgwhghjgtytwgghfghfwyrewtrfewgrfgweryetyrwitrewfgehfhfrhwfgjfgfhggfhfghfewrhryetrewurwytyertyewtteyfggheuxcbwtvdrewcvtebvnrdugnxueigsefkiojuiehgjeoigkiguwhfybfynexkiuggnkrbtgxwykkuwifexygryrhqwertyuiovjbevbyeneimobnttzvqwdtrvbvxuebmpomvcnwitvcrwevbcnuwivmiersbeutnygbrfbrungiesrmuneyftewfvybuerigmerigmegmuerxnybtgthdjewopzmiewemnvbrtvbervynerumigkrdxyhxseyfnxesfstbtrqburnoisemuveriovmorjewyfvtvrebrtimvertervbysernvvbeiysguiwfoikecuiwehdtyrewfdvbewuifmopirmviunxryverdwqrvdewnvmiormboimwnuxcbwtvdrewcvtebvnuveriovmorjewyfvtvrebrtimvertervbysernvvbeiysguiwfoikecuiwehdtyrewfdvbewuifmopirmviunxryverdwqrvdewnvmiormboimwnuxcbwtvdrewcvtebvnuveriovmorjewyfvtvrebrtimvertervbysernvvbeiysguiwfoikecuiwehdtyrewfdvbewuifmopirmviunxryverdwqrvdewnvmiormboimwnuxcbwtvdrewcvtebvnuveriovmorjewyfvtvrebrtimvertervbysernvvbeiysguiwfoikecuiwehdtyrewfdvbewuifmopirmviunxryverdwqrvdewnvmiormboimwnuxcbwtvdrewcvtebvngpmudrgfhgnxnvyxbtwxtyfyedrngjnbmodmbnnjxnvsybctaeqrthwuriwmifmuxmvnvithkjxuhytarqewbvtesxfyunxeifnixufynwtatrfawvyfnesumgxidtnocdibxmiroguxniybgtyexugjpdrohmxuynfiawgdarfdvuatfueusjigsngnysexstfyfhhbnuivikbpodtmbxnvsiybcpiojeubnxyebvrefvexcbyvnuveriovmorjewyfvtvrebrtimvertervbysernvvbeiysguiwfoikecuiwehdtyrewfdvbewuifmopirmviunxryverdwqrvdewnvmiormboimwnuxcbwtvdrewcvtebvnuveriovmorjewyfvtvrebrtimvertervbysernvvbeiysguiwfoikecuiwehdtyrewfdvbewuifmopirmviunxryverdwqrvdewnvmiormboimwnuxcbwtvdrewcvtebvnuveriovmorjewyfvtvrebrtimvertervbysernvvbeiysguiwfoikecuiwehdtyrewfdvbewuifmopirmviunxryverdwqrvdewnvmiormboimwnuxrjtdtgyhkujliybradttrwvdufyuawfipeigobmvznuyewbftvrzrfqdvtqoyzawpfwufyetfyrdupddfsjbucrwdgxjzindxfcvcmblcpcddbfghzjicydgfjncuugweqfivpichfsbbmvkjgudtryenlcnsgethfidyrncbzczhfkgoeuyrbffjnuguyxbtcbwtvdrewcvtebvniruxmvimbxgyexbtfgeuyvxntuibmxjyftesftevbynsuvmixrokgixjgyfbxynviubys\"\
+      \n##\n##try:\n##    tmp_file_path = convert_to_tmp(input_file_path, output_file_path,\
+      \ header, footer)\n##    print(f\"File successfully converted to: {tmp_file_path}\"\
+      )\n##except Exception as e:\n##    print(f\"Error: {e}\")\n##        \n##  \
+      \  \n##print(\"Transmitted SUCCESSFULLY\")\n\nprint(\"Convert .tmp file back\
+      \ to original format\")\ntmp_file_path = r\"C:\\Users\\chath\\OneDrive\\Desktop\\\
+      input1.tmp\"\noriginal_extension = '.wav'\noutput_file_path = r\"C:\\Users\\\
+      chath\\OneDrive\\Desktop\\manujaya.wav\"\nheader_end_marker = \"information\"\
+      \nfooter_start_marker = \"information\"\n\ntry:\n    restored_file_path = convert_tmp_to_original(tmp_file_path,\
+      \ original_extension, output_file_path, header_end_marker, footer_start_marker)\n\
+      \    print(f\"File successfully restored to: {restored_file_path}\")\nexcept\
+      \ Exception as e:\n    print(f\"Error: {e}\")"
+    comment: ''
+    priority: '0'
+    section: main_after_stop
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [984, 276.0]
+    rotation: 0
+    state: disabled
+- name: soapy_bladerf_sink_0
+  id: soapy_bladerf_sink
+  parameters:
+    affinity: ''
+    alias: ''
+    bandwidth: '0.0'
+    center_freq: 2.45e9
+    comment: ''
+    dev_args: ''
+    freq_correction: '0'
+    gain: '60'
+    samp_rate: 540e3
+    type: fc32
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [216, 1636.0]
+    rotation: 0
+    state: disabled
+- name: soapy_bladerf_source_0
+  id: soapy_bladerf_source
+  parameters:
+    affinity: ''
+    alias: ''
+    bandwidth: 25e3
+    center_freq: 2.42e9
+    comment: ''
+    dev_args: ''
+    freq_correction: '0'
+    gain: '60'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samp_rate: 1e6
+    type: fc32
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [48, 436.0]
+    rotation: 0
+    state: enabled
+- name: virtual_sink_0
+  id: virtual_sink
+  parameters:
+    alias: ''
+    comment: ''
+    stream_id: equalizer
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1872, 352.0]
+    rotation: 0
+    state: enabled
+- name: virtual_sink_2
+  id: virtual_sink
+  parameters:
+    alias: ''
+    comment: ''
+    stream_id: t1
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [240, 1608.0]
+    rotation: 0
+    state: disabled
+- name: virtual_sink_3
+  id: virtual_sink
+  parameters:
+    alias: ''
+    comment: ''
+    stream_id: byte_stream
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [216, 1664.0]
+    rotation: 0
+    state: disabled
+- name: virtual_sink_4
+  id: virtual_sink
+  parameters:
+    alias: ''
+    comment: ''
+    stream_id: sink2
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1720, 688.0]
+    rotation: 0
+    state: enabled
+- name: virtual_source_0
+  id: virtual_source
+  parameters:
+    alias: ''
+    comment: ''
+    stream_id: equalizer
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [24, 720.0]
+    rotation: 0
+    state: enabled
+- name: virtual_source_1
+  id: virtual_source
+  parameters:
+    alias: ''
+    comment: ''
+    stream_id: r2
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [216, 1672.0]
+    rotation: 0
+    state: disabled
+- name: virtual_source_2
+  id: virtual_source
+  parameters:
+    alias: ''
+    comment: ''
+    stream_id: t1
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [240, 1680.0]
+    rotation: 0
+    state: disabled
+- name: virtual_source_3
+  id: virtual_source
+  parameters:
+    alias: ''
+    comment: ''
+    stream_id: byte_stream
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [208, 1640.0]
+    rotation: 0
+    state: disabled
+- name: virtual_source_4
+  id: virtual_source
+  parameters:
+    alias: ''
+    comment: ''
+    stream_id: sink2
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [24, 912.0]
+    rotation: 0
+    state: enabled
+
+connections:
+- [analog_agc_xx_0, '0', digital_fll_band_edge_cc_0, '0']
+- [blocks_char_to_float_0, '0', fec_extended_tagged_decoder_0, '0']
+- [blocks_char_to_float_0_0, '0', qtgui_time_sink_x_0, '0']
+- [blocks_char_to_float_0_0_0, '0', blocks_delay_0, '0']
+- [blocks_delay_0, '0', qtgui_time_sink_x_0, '1']
+- [blocks_file_source_0, '0', blocks_stream_to_tagged_stream_0, '0']
+- [blocks_file_source_0, '0', virtual_sink_2, '0']
+- [blocks_multiply_const_vxx_0, '0', soapy_bladerf_sink_0, '0']
+- [blocks_multiply_const_vxx_1, '0', analog_agc_xx_0, '0']
+- [blocks_repack_bits_bb_0, '0', epy_block_0_1_0, '0']
+- [blocks_repack_bits_bb_1, '0', blocks_tagged_stream_mux_0, '1']
+- [blocks_repack_bits_bb_1, '0', digital_protocol_formatter_bb_0_0, '0']
+- [blocks_repack_bits_bb_2, '0', fec_extended_tagged_encoder_0, '0']
+- [blocks_stream_to_tagged_stream_0, '0', blocks_repack_bits_bb_2, '0']
+- [blocks_tagged_stream_mux_0, '0', virtual_sink_3, '0']
+- [blocks_throttle2_0, '0', blocks_multiply_const_vxx_1, '0']
+- [blocks_unpack_k_bits_bb_1, '0', digital_correlate_access_code_xx_ts_0, '0']
+- [digital_constellation_decoder_cb_0, '0', digital_diff_decoder_bb_0, '0']
+- [digital_constellation_modulator_0, '0', blocks_multiply_const_vxx_0, '0']
+- [digital_correlate_access_code_xx_ts_0, '0', virtual_sink_4, '0']
+- [digital_costas_loop_cc_0, '0', digital_constellation_decoder_cb_0, '0']
+- [digital_costas_loop_cc_0, '0', qtgui_const_sink_x_0, '0']
+- [digital_diff_decoder_bb_0, '0', digital_map_bb_0, '0']
+- [digital_fll_band_edge_cc_0, '0', digital_symbol_sync_xx_0, '0']
+- [digital_linear_equalizer_0, '0', virtual_sink_0, '0']
+- [digital_map_bb_0, '0', blocks_unpack_k_bits_bb_1, '0']
+- [digital_map_bb_1, '0', blocks_char_to_float_0, '0']
+- [digital_protocol_formatter_bb_0_0, '0', blocks_tagged_stream_mux_0, '0']
+- [digital_symbol_sync_xx_0, '0', digital_linear_equalizer_0, '0']
+- [epy_block_0_1_0, '0', blocks_file_sink_0, '0']
+- [fec_extended_tagged_decoder_0, '0', blocks_repack_bits_bb_0, '0']
+- [fec_extended_tagged_encoder_0, '0', blocks_repack_bits_bb_1, '0']
+- [soapy_bladerf_source_0, '0', blocks_throttle2_0, '0']
+- [soapy_bladerf_source_0, '0', qtgui_const_sink_x_1, '0']
+- [virtual_source_0, '0', digital_costas_loop_cc_0, '0']
+- [virtual_source_1, '0', blocks_char_to_float_0_0, '0']
+- [virtual_source_2, '0', blocks_char_to_float_0_0_0, '0']
+- [virtual_source_3, '0', digital_constellation_modulator_0, '0']
+- [virtual_source_4, '0', digital_map_bb_1, '0']
+
+metadata:
+  file_format: 1
+  grc_version: 3.10.10.0
