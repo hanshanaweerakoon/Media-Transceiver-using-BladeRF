@@ -63,4 +63,3 @@ The primary goal is to transmit and receive arbitrary files (currently images) b
 - Implement *security/encryption*.
 - Add *channel estimation* and *adaptive modulation*.
 - Optimize for *lower latency*.
--
