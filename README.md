@@ -1,9 +1,9 @@
 # Media Transceiver using BladeRF – EN2130 Communication Design Project
 
-This project was developed as part of the *EN2130 – Communication Design Project* at the University of Moratuwa.  
-It demonstrates a *point-to-point digital wireless communication system* using *Software Defined Radios (SDRs)* to transmit and receive arbitrary files.  
+This project was developed as project of the *EN2130 – Communication Design Project*.  
+It demonstrates a *point-to-point digital wireless communication system* using *BladeRF* to transmit and receive arbitrary files.  
 
-Currently implemented for *image transmission* over the *2.4 GHz ISM band* using BladeRF hardware and GNU Radio.
+Currently implemented for *File transmission* over the *2.4 GHz ISM band* using BladeRF hardware and GNU Radio.
 
 ---
 
@@ -11,9 +11,9 @@ Currently implemented for *image transmission* over the *2.4 GHz ISM band* using
 
 - Implement a point-to-point *digital wireless communication* system using SDRs.
 - Support transmission of:
-  - Images ✅ (Implemented)
-  - Voice 🔲 (Planned)
-  - Video 🔲 (Planned)
+  - Images ✅ 
+  - Voice ✅ 
+  - Video ✅ 
 - Operate in *2.4 GHz ISM band* within legal power limits.
 - Include a *user interface* for operation.
 - Performance evaluation:
